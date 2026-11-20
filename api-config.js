@@ -1,0 +1,1 @@
+// Public FastAPI endpoint for this Netlify deployment.\n// Replace this URL here if your Cloudflare Quick Tunnel restarts.\n(function () {\n  window.FC_API_BASE = 'https://lyric-scroll-weekends-towns.trycloudflare.com';\n})();\n

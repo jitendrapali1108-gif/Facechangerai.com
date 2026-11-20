@@ -1,0 +1,28 @@
+FACE CHANGER AI — GITHUB SETUP
+================================
+
+1. ZIP ko EXTRACT karein.
+2. https://github.com/new par repository banayein: facechanger-ai.
+3. Repository ke andar Add file -> Upload files se EXTRACTED folder ki files upload karein (ZIP ko as-it-is mat upload karein).
+4. index.html root par hona chahiye, assets folder ke andar images honi chahiye.
+5. GitHub repository -> Netlify -> Add new project -> Import existing project -> GitHub -> repo select karein.
+6. Build command BLANK rakhein. Publish directory: . (dot)
+7. Firebase Google Sign-in ke authorized domains me apna site domain add karein.
+8. Backend me apni website ki origin CORS allow list me add karein.
+
+Github Pages demo (commercial paid website ke liye suitable nahin):
+- Repo Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
+- Repo Actions -> Publish static preview to GitHub Pages -> Run workflow.
+
+API endpoint abhi api-config.js me ye hai:
+https://lyric-scroll-weekends-towns.trycloudflare.com
+Cloudflare Quick Tunnel ka URL badle to api-config.js update karna hoga.
+Your PC and tunnel must remain running for the API to respond.
+
+WEBSITE FEATURES:
+Single Face Swap, Multiple Face Swap, Video Face Swap.
+No Connect API button, no model dropdown.
+Automatic fallback only for API-ready models (actual backend/model setup required).
+
+GITHUB PAGES POLICY:
+https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits

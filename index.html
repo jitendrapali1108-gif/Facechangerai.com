@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#12041f">
+  <meta name="facechanger-release" content="fc-netlify-video-clean-20261120-r5">
+  <title>Face Changer AI</title>
+  <meta name="description" content="Face Changer AI - premium AI face swap studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=fc-netlify-video-clean-20261120-r5">
+  <link rel="preload" as="image" href="assets/hero-ironman-swap.webp" type="image/webp" fetchpriority="high">
+  <style id="visible-video-tab-guarantee">
+    .modeBar {display:flex !important; justify-content:center !important; flex-wrap:wrap !important; width:max-content; max-width:100%; gap:6px;}
+    .modeBar #videoModeBtn {display:inline-flex !important; visibility:visible !important; opacity:1 !important; align-items:center; justify-content:center; gap:7px; white-space:nowrap;}
+    @media (max-width: 540px) {.modeBar {width:100%;} .modeBar #videoModeBtn {flex:1 1 100%;}}
+  </style>
+</head>
+
+<body>
+  <div class="authNotice" id="authNotice" hidden></div>
+
+  <div class="loginModal" id="loginModal" hidden aria-hidden="true">
+    <div class="loginDialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="loginModalClose" id="loginModalClose" type="button" aria-label="Close login">×</button>
+
+      <section class="loginPane">
+        <div class="loginMiniBrand"><span class="loginMiniLogo">FC</span><span>FACE CHANGER AI</span></div>
+        <div class="loginPaneInner">
+          <span class="loginKicker">WELCOME BACK</span>
+          <h2 id="loginTitle">Sign In</h2>
+          <p>Continue securely with your Google account.</p>
+          <button class="modalGoogleBtn" id="modalGoogleBtn" type="button">
+            <span class="googleMark">G</span>
+            <span>Sign in with Google</span>
+          </button>
+          <div class="loginOnlyNote"><i></i><span>Google-only login • No password stored on this site</span></div>
+          <div class="loginFreeBox"><strong>5 free face swaps</strong><span>After your free limit, Premium is
+              required.</span></div>
+          <div class="loginTerms">By continuing, you agree to use only photos you have permission to edit.</div>
+        </div>
+      </section>
+
+      <section class="loginPromo loginPromoImage" aria-hidden="true">
+        <img class="loginPromoPoster" src="assets/login-promo-poster.webp" alt="" loading="lazy" decoding="async">
+        <div class="loginPromoPortraitCard">
+          <img src="assets/facechanger-neon-portrait.webp" alt="" loading="lazy" decoding="async">
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <div class="premiumGate" id="premiumGate" hidden>
+    <div class="premiumCard">
+      <button class="premiumClose" id="premiumClose" type="button" aria-label="Close">×</button>
+      <div class="premiumIcon">✦</div>
+      <h2>Free limit reached</h2>
+      <p>Your 5 free face swaps are complete. Premium is required for more swaps.</p>
+      <button class="premiumBtn" id="premiumBtn" type="button">UPGRADE TO PREMIUM</button>
+      <small id="premiumNote">Payment connection can be added next.</small>
+    </div>
+  </div>
+  <aside class="side-ad side-ad-left">
+    <span>Advertisement</span>
+    <div class="side-ad-inner">
+      <iframe class="side-ad-frame" title="Advertisement" scrolling="no" frameborder="0" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&#x27;utf-8&#x27;&gt;&lt;style&gt;html,body{margin:0;padding:0;width:160px;height:600px;overflow:hidden;background:transparent}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;script&gt;
+var atOptions = {
+  &#x27;key&#x27; : &#x27;3e0d3b1a7bb844450df658b88b3321f2&#x27;,
+  &#x27;format&#x27; : &#x27;iframe&#x27;,
+  &#x27;height&#x27; : 600,
+  &#x27;width&#x27; : 160,
+  &#x27;params&#x27; : {}
+};
+&lt;/script&gt;
+&lt;script src=&#x27;https://bauval.org/22/3e0d3b1a7bb844450df658b88b3321f2&#x27;&gt;&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+    </div>
+  </aside>
+  <aside class="side-ad side-ad-right">
+    <span>Advertisement</span>
+    <div class="side-ad-inner">
+      <iframe class="side-ad-frame" title="Advertisement" scrolling="no" frameborder="0" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&#x27;utf-8&#x27;&gt;&lt;style&gt;html,body{margin:0;padding:0;width:160px;height:600px;overflow:hidden;background:transparent}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;script&gt;
+var atOptions = {
+  &#x27;key&#x27; : &#x27;3e0d3b1a7bb844450df658b88b3321f2&#x27;,
+  &#x27;format&#x27; : &#x27;iframe&#x27;,
+  &#x27;height&#x27; : 600,
+  &#x27;width&#x27; : 160,
+  &#x27;params&#x27; : {}
+};
+&lt;/script&gt;
+&lt;script src=&#x27;https://bauval.org/22/3e0d3b1a7bb844450df658b88b3321f2&#x27;&gt;&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+    </div>
+  </aside>
+
+  <div class="ambient a1"></div>
+  <div class="ambient a2"></div>
+  <div class="stars"></div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="mark">FC</span>
+      <span class="brandText">FACE CHANGER AI</span>
+    </a>
+    <nav><a href="#how">How It Works</a><a href="#video-swap">Video Swap</a></nav>
+    <button class="navLoginBtn" id="googleLoginBtn" type="button">LOGIN</button>
+    <div class="accountArea" id="accountArea" hidden>
+      <img id="accountPhoto" class="accountPhoto" alt="" referrerpolicy="no-referrer">
+      <div class="accountMeta"><b id="accountName">User</b><span id="accountQuota">Free plan</span></div>
+      <button class="navUpgradeBtn accountUpgradeBtn" id="navUpgradeBtn" type="button" hidden>UPGRADE</button>
+      <button id="signOutBtn" class="signOutBtn" type="button">Sign out</button>
+    </div>
+    <div class="apiBadge apiDotOnly" id="apiBadge" aria-label="API status" title="FaceChanger API status"><i></i><span
+        id="apiStatus" class="srOnly">Checking...</span></div>
+  </header>
+
+
+
+  <main>
+    <section class="adWrap">
+      <span>Advertisement</span>
+      <div class="adInner">
+        <script>
+          atOptions = {
+            'key': '5dcbe25d261ebc0a2f94b4bef05eafce',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+        </script>
+        <script src="https://bauval.org/22/5dcbe25d261ebc0a2f94b4bef05eafce"></script>
+      </div>
+    </section>
+
+    <section class="hero heroShowcase">
+      <div class="heroCopy">
+        <div class="eyebrow">ADVANCED AI FACE TECHNOLOGY</div>
+        <h1>FACE CHANGER AI</h1>
+        <p>Swap faces online with a clean AI workflow. Upload a source face, choose the photo to change, and create your
+          result in seconds.</p>
+        <a class="heroStartBtn" href="#how">START FACE SWAPPING <span>→</span></a>
+        <div class="heroMiniTrust"><span>●</span> Single & multiple face swap</div>
+      </div>
+      <div class="heroVisual" aria-hidden="true">
+        <div class="heroVisualGlow"></div>
+        <img src="assets/hero-ironman-swap.webp" alt="Normal portrait transformed into a red and gold armored hero"
+          loading="eager" fetchpriority="high" decoding="async" width="900" height="638">
+      </div>
+    </section>
+
+    <section class="modeBar" data-site-release="fc-netlify-video-clean-20261120-r5" aria-label="Face swap mode" role="group">
+      <button class="modeBtn active" id="singleModeBtn" type="button" aria-pressed="true">Single Face</button>
+      <button class="modeBtn" id="multiModeBtn" type="button" aria-pressed="false">Multiple Face Swap</button>
+      <button class="modeBtn videoTabBtn" id="videoModeBtn" type="button" aria-controls="video-swap" aria-pressed="false">Video Face Swap <span class="videoTabNew">NEW</span></button>
+    </section>
+
+    <section class="videoStudio" id="video-swap" hidden aria-labelledby="videoSwapTitle">
+      <div class="videoStudioHeading">
+        <div>
+          <span class="videoEyebrow">NEW · VIDEO FACE SWAP</span>
+          <h2 id="videoSwapTitle">Change faces in <span>videos</span></h2>
+          <p>Upload a clear face photo and a video. Face swapping runs automatically in the background.</p>
+        </div>
+        <span class="videoStudioPill">MP4 OUTPUT</span>
+      </div>
+      <div class="videoStudioGrid">
+        <div class="videoUploadCard">
+          <label class="videoInputTitle" for="videoSourceInput"><span>01</span> Source face photo</label>
+          <label class="videoDropzone" for="videoSourceInput">
+            <input type="file" id="videoSourceInput" accept="image/jpeg,image/png,image/webp" hidden>
+            <span class="videoDropIcon">◎</span>
+            <strong id="videoSourceName">Choose a face photo</strong>
+            <small>JPG / PNG / WEBP · max 10 MB</small>
+          </label>
+          <img id="videoSourcePreview" class="videoSourcePreview" alt="Selected source face preview" hidden>
+        </div>
+        <div class="videoUploadCard">
+          <label class="videoInputTitle" for="videoTargetInput"><span>02</span> Target video</label>
+          <label class="videoDropzone" for="videoTargetInput">
+            <input type="file" id="videoTargetInput" accept="video/mp4,video/webm,video/quicktime,.mp4,.mov,.webm" hidden>
+            <span class="videoDropIcon">▣</span>
+            <strong id="videoTargetName">Choose a video</strong>
+            <small>MP4 / MOV / WEBM · max 80 MB · up to 60 sec</small>
+          </label>
+          <video id="videoTargetPreview" class="videoTargetPreview" controls playsinline preload="metadata" hidden></video>
+        </div>
+        <div class="videoRunCard">
+          <div class="videoAutoHeading"><span>03</span> CREATE VIDEO</div>
+          <button id="generateVideoBtn" class="videoGenerateBtn" type="button">✦ GENERATE VIDEO SWAP</button>
+          <div class="videoProgressWrap" id="videoProgressWrap" hidden>
+            <div class="videoProgressRail"><div id="videoProgressBar" class="videoProgressBar"></div></div>
+            <span id="videoProgressText">Preparing video...</span>
+          </div>
+          <p class="videoHint" id="videoSwapMessage" role="status" aria-live="polite">Choose your photo and video to begin. Only upload media you have permission to edit.</p>
+        </div>
+      </div>
+      <div class="videoResultPanel" id="videoResultPanel" hidden>
+        <div class="videoResultTop"><h3>Your video is ready</h3><button type="button" id="videoDownloadBtn" class="videoDownloadBtn">↓ DOWNLOAD MP4</button></div>
+        <video id="videoResultPreview" controls playsinline preload="metadata"></video>
+        <p id="videoResultNote">Video processing complete.</p>
+      </div>
+    </section>
+
+<section id="how" class="workspace">
+      <article class="workCard" id="singleSourceCard">
+        <div class="cardHead"><b>1</b>
+          <div>
+            <h2>USE THIS FACE</h2>
+            <p>Upload the face you want to use</p>
+          </div>
+        </div>
+        <label class="drop" id="sourceDrop" for="sourceInput">
+          <input id="sourceInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+          <div class="empty" id="sourceEmpty"><strong>◎</strong><b></b><span></span></div>
+          <div class="previewWrap" id="sourceWrap">
+            <img id="sourcePreview" alt="Source preview">
+            <div class="wm">FACE CHANGER AI</div>
+          </div>
+        </label>
+        <button class="removeBtn" id="clearSource" type="button">Remove image</button>
+      </article>
+
+      <article class="workCard targetCard">
+        <div class="cardHead"><b>2</b>
+          <div>
+            <h2>CHANGE THIS PHOTO</h2>
+            <p id="targetHint">Upload the photo where you want to replace the face</p>
+          </div>
+        </div>
+        <label class="drop" id="targetDrop" for="targetInput">
+          <input id="targetInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+          <div class="empty" id="targetEmpty"><strong>▧</strong><b></b><span></span></div>
+          <div class="previewWrap" id="targetWrap">
+            <img id="targetPreview" alt="Target preview">
+            <div class="wm">FACE CHANGER AI</div>
+            <div class="faceCountBadge" id="faceCountBadge">Detecting faces…</div>
+          </div>
+        </label>
+        <button class="removeBtn" id="clearTarget" type="button">Remove image</button>
+      </article>
+
+      <article class="workCard multiAssignCard" id="multiAssignCard">
+        <div class="cardHead"><b>3</b>
+          <div>
+            <h2>DETECTED FACES</h2>
+            <p>Assign a different source photo to each target face</p>
+          </div>
+        </div>
+        <div class="multiEmpty" id="multiEmpty">Upload a CHANGE THIS PHOTO to detect faces.</div>
+        <div class="faceAssignments" id="faceAssignments"></div>
+      </article>
+
+      <article class="workCard resultCard">
+        <div class="cardHead"><b id="resultStep">3</b>
+          <div>
+            <h2>RESULT</h2>
+            <p>Your generated result will appear here</p>
+          </div>
+        </div>
+        <div class="resultBox" id="resultBox">
+          <div class="resultEmpty" id="resultEmpty"><strong>FC</strong><span>Result preview</span></div>
+          <img id="resultImage" alt="Face Changer AI result">
+        </div>
+        <button class="downloadBtn" id="downloadBtn" type="button" disabled>↓ Download JPG</button>
+      </article>
+    </section>
+
+    <section class="generateArea">
+      <button class="generateBtn" id="swapBtn" disabled><span>✦</span><span id="swapLabel">GENERATE FACE
+          SWAP</span></button>
+      <div class="statusLine"><i id="statusDot"></i><span id="statusText">Upload both images to begin.</span></div>
+    </section>
+
+
+
+    <section class="adWrap">
+      <span>Advertisement</span>
+      <div class="adInner">
+        <script>
+          atOptions = {
+            'key': '5dcbe25d261ebc0a2f94b4bef05eafce',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+        </script>
+        <script src="https://bauval.org/22/5dcbe25d261ebc0a2f94b4bef05eafce"></script>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Face Changer AI</span><span>Use only images you have permission to edit.</span></footer>
+
+  <script src="api-config.js?v=fc-netlify-video-clean-20261120-r5"></script>
+  <script type="module" src="auth.js?v=fc-netlify-video-clean-20261120-r5"></script>
+  <script src="script.js?v=fc-netlify-video-clean-20261120-r5"></script>
+  <script src="video-swap.js?v=fc-netlify-video-clean-20261120-r5"></script>
+  <script src="site-ui.js?v=fc-netlify-video-clean-20261120-r5"></script>
+</body>
+
+</html>

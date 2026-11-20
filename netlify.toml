@@ -1,0 +1,1 @@
+[build]\n  publish = "."\n\n[[headers]]\n  for = "/index.html"\n  [headers.values]\n    Cache-Control = "public, max-age=0, must-revalidate"\n\n[[headers]]\n  for = "/*.js"\n  [headers.values]\n    Cache-Control = "public, max-age=0, must-revalidate"\n\n[[headers]]\n  for = "/*.css"\n  [headers.values]\n    Cache-Control = "public, max-age=0, must-revalidate"\n
